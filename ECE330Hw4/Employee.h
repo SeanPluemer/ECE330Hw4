@@ -10,6 +10,7 @@ class Employee
 {
 public:
 	Employee(int, const string&, const string&, const char&, int);
+
 	void setEmployeeId(int);
 	int getEmployeeId();
 	

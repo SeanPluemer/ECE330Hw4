@@ -16,7 +16,8 @@ int main() {
 	employee2.print();
 
 	HourlyEmployee employee3(96, "Sean", "Pluemer", 'A', 2500, 10, 10,0);
-
+	employee1.print();
+	employee2.print();
 	employee3.print();
 
 

@@ -1,7 +1,7 @@
 #pragma once
 #ifndef Salaried_H
 #define SALARIED_H
-
+#include "Employee.h"
 #include <string>
 using namespace std;
 
@@ -28,7 +28,7 @@ public:
 	void setMonthlySalary(int);
 	int getMonthlySalary();
 
-	void print() const;
+	void print();
 private:
 	string firstName;
 	string lastName;

@@ -1,4 +1,5 @@
 #include "SalariedEmployee.h"
+#include "Employee.h"
 #include <iostream>
 
 using namespace std;
@@ -12,7 +13,7 @@ SalariedEmployee::SalariedEmployee(int Id, const string& first, const string& la
 	departmentCode = department;
 	monthlySalary = salary / 12;
 }
-void SalariedEmployee::print() const {
-	cout << " ID: " << employeeId;
+void SalariedEmployee::print()  {
+	Employee::print();
 	cout << "Monthly Salary: " << monthlySalary;
 }

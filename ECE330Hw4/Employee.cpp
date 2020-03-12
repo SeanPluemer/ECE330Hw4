@@ -12,6 +12,8 @@ Employee::Employee(int Id, const string& first, const string& last, const char &
 	departmentCode = department;
 }
 void Employee::print() const {
-	cout << " ID: " << employeeId;
+	cout << " ID: " << employeeId <<
+		" Name: " << firstName << " " << middleName << " " << lastName << endl <<
+		"Department: " << departmentCode << endl;
 
 }
