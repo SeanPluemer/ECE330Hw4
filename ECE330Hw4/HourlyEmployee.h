@@ -1,50 +1,35 @@
-#pragma once
-
+//HourlyEmployee.h
 #ifndef HOURLYEMPLOYEE_H
 #define HOURLYEMPLOYEE_H
 
 #include <string>
+#include<iostream>
+#include "Employee.h"
+
 using namespace std;
-class HourlyEmployee
-{
+class HourlyEmployee :public Employee{
 public:
-	HourlyEmployee(int, const string&, const string&, const char&, int,int,int, int);
-	void setEmployeeId(int);
-	int getEmployeeId();
+	HourlyEmployee(int, const string&, const string&, const char&, int, double, double, double =0);
 
-	void setFirstName(const string&);
-	string getFirstName() const;
+	void setHourlyRate(double);
+	double getHourlyRate() const;
 
-	void setMiddleName(const string&);
-	string getLastName() const;
+	void setHours(double);
+	double getHours()const;
 
-	void setMiddleName(const char&);
-	string getMiddleName() const;
+	void setOvertime(double);
+	double getOvertime()const;
 
-
-	void setDepartmentCode(int);
-	int getDepartmentCode();
-
-	void setHourlyRate(int);
-	int getHourlyRate();
-
-	void setHours(int);
-	int getHours();
-
-	void setOvertime(int);
-	int getOvertime();
-
-	void print() const;
+	double salaryCalculation();
+	void print() ;
 private:
-	string firstName;
-	string lastName;
-	int employeeId;
-	int departmentCode;
-	int hourlyRate;
-	int hoursWorked;
-	int overtimeHoursWorked;
+	
+	double hourlyRate;
+	double hoursWorked;
+	double overtimeHoursWorked;
+	
 
-	char middleName;
+
 };
 
 #endif

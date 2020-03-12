@@ -1,41 +1,27 @@
-#pragma once
-#ifndef Salaried_H
-#define SALARIED_H
+//SalariedEmployee.H
+#ifndef SALARIEDEMPLOYEE_H
+#define SALARIEDEMPLOYEE_H
+
+#include <iostream>
 #include "Employee.h"
 #include <string>
+
 using namespace std;
 
-class SalariedEmployee
+class SalariedEmployee :public Employee
 {
 public:
-	SalariedEmployee(int, const string&, const string&, const char&, int, int);
-	void setEmployeeId(int);
-	int getEmployeeId();
+	SalariedEmployee(int, const string&, const string&, const char&, int, double,double=1);
+	
+	void setMonthlySalary(double);
+	double getMonthlySalary()const;
 
-	void setFirstName(const string&);
-	string getFirstName() const;
-
-	void setMiddleName(const string&);
-	string getLastName() const;
-
-	void setMiddleName(const char&);
-	string getMiddleName() const;
-
-
-	void setDepartmentCode(int);
-	int getDepartmentCode();
-
-	void setMonthlySalary(int);
-	int getMonthlySalary();
-
+	double calculateSalary();
 	void print();
 private:
-	string firstName;
-	string lastName;
-	int employeeId;
-	int departmentCode;
-	int monthlySalary;
-	char middleName;
+	double monthlySalary;
+	double fractionWorked;
+
 };
 #endif
 
